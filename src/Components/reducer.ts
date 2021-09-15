@@ -4,7 +4,8 @@ import { fruits, vegetales } from './data';
 export interface MyState {
   fruits: string[];
   vegetales: string[];
-  increase: () => void;
+  increaseBanana: () => void;
+  increaseMelon: () => void;
   decrease: () => void;
 }
 
@@ -12,7 +13,8 @@ export interface MyState {
 export const initialState: MyState = {
   fruits: fruits,
   vegetales: vegetales,
-  increase: () => {},
+  increaseBanana: () => {},
+  increaseMelon: () => {},
   decrease: () => {},
 };
 
@@ -29,13 +31,17 @@ export type MyActions = {
 };
 
 //Action functions
-export const inscreaseFruit: MyActions = {
+export const addBanana: MyActions = {
   type: ActionType.IncreaseFruit,
   payload: '🍌',
 };
-export const decreaseFruit: MyActions = {
+export const addWatermelon: MyActions = {
   type: ActionType.IncreaseFruit,
   payload: '🍉',
+};
+export const removeLastFruit: MyActions = {
+  type: ActionType.DecreaseFruit,
+  payload: '',
 };
 
 //fruit reducer

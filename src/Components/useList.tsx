@@ -7,12 +7,12 @@ function useList(array?: string[]) {
     //set content
     setContent(array);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [array]);
 
   return [
     <ul>
-      {content?.map((item) => {
-        return <li>{item}</li>;
+      {content?.map((item, index) => {
+        return <li key={index}>{item}</li>;
       })}
     </ul>,
     array?.length ?? 0,

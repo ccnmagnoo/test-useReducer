@@ -1,10 +1,11 @@
 import React from 'react';
 import {
-  decreaseFruit,
   fruitReducer,
   initialState,
-  inscreaseFruit,
+  addBanana,
   MyState,
+  addWatermelon,
+  removeLastFruit,
 } from './reducer';
 
 //create context
@@ -17,8 +18,9 @@ const MyProvider: React.FC = (props) => {
 
   const init: MyState = {
     ...state,
-    increase: () => dispatch(inscreaseFruit),
-    decrease: () => dispatch(decreaseFruit),
+    increaseBanana: () => dispatch(addBanana),
+    increaseMelon: () => dispatch(addWatermelon),
+    decrease: () => dispatch(removeLastFruit),
   };
   //component provider
   return <MyContext.Provider value={init}>{props.children}</MyContext.Provider>;
