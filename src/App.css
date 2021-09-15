@@ -49,7 +49,10 @@
 .Data-section {
   color: #2a3e51;
   box-decoration-break: initial;
-  border: solid 1 px whitesmoke;
+  border-radius: 10px;
+
+  margin: 5px;
+  border: inset 2px rgb(170, 196, 196);
 }
 
 .App-link {
