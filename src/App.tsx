@@ -1,11 +1,14 @@
 import './App.css';
+import MyProvider from './Components/contextProvider';
 import { Parent } from './Components/Parent-component';
 
 function App() {
   return (
-    <div className='App-header'>
-      <Parent />
-    </div>
+    <MyProvider fruits={[]} vegetales={[]}>
+      <div className='App-header'>
+        <Parent />
+      </div>
+    </MyProvider>
   );
 }
 
