@@ -1,7 +1,7 @@
 import React from 'react';
 
-function useList(array: string[]) {
-  const [content, setContent] = React.useState<string[]>([]);
+function useList(array?: string[]) {
+  const [content, setContent] = React.useState<string[] | null | undefined>([]);
 
   React.useEffect(() => {
     //set content
@@ -9,13 +9,14 @@ function useList(array: string[]) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return (
+  return [
     <ul>
-      {content.map((item) => {
+      {content?.map((item) => {
         return <li>{item}</li>;
       })}
-    </ul>
-  );
+    </ul>,
+    array?.length ?? 0,
+  ];
 }
 
 export default useList;
