@@ -4,16 +4,16 @@ import { MyContext } from './contextProvider';
 import useList from './useList';
 
 export const Child = () => {
-  //consumind data from context
+  //consuming data from context 🍴
   const data = React.useContext(MyContext);
-  //custom hook 👨‍🍳
+  //custom hook return a <ul> list 👨‍🍳
   const [list, size] = useList(data?.fruits);
   return (
     <>
       <div className='Child-section'>
         <h4>Child component</h4>
-        <div className='Data-section'>{list}</div>
-        <div className='Data-section'>size: {size}</div>
+        <p className='Data-section'>{list}</p>
+        <p className='Data-section'>size: {size}</p>
       </div>
     </>
   );
