@@ -4,7 +4,7 @@ import { Parent } from './Components/Parent-component';
 
 function App() {
   return (
-    <MyProvider fruits={[]} vegetales={[]}>
+    <MyProvider>
       <div className='App-header'>
         <Parent />
       </div>

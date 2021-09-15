@@ -15,7 +15,7 @@ const initialData: MyStore = {
 export const MyContext = React.createContext<MyStore | null>(null);
 
 //create component provider of this context
-const MyProvider: React.FC<MyStore> = (props) => {
+const MyProvider: React.FC = (props) => {
   return <MyContext.Provider value={initialData}>{props.children}</MyContext.Provider>;
 };
 
