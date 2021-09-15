@@ -1,4 +1,5 @@
 import React from 'react';
+import { Child } from './Child-component';
 
 export const Parent = () => {
   return (
@@ -12,6 +13,7 @@ export const Parent = () => {
           <li>🥝</li>
         </ul>
       </div>
+      <Child />
     </section>
   );
 };

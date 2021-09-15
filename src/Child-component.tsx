@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Child = () => {
   return (
-    <div>
+    <>
       <div className='Child-section'>
         <h4>Child component</h4>
         <div className='Data-section'>
@@ -14,6 +14,6 @@ export const Child = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </>
   );
 };
