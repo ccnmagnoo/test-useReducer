@@ -1,15 +1,22 @@
 import React from 'react';
 import { fruits, vegetales } from './data';
 
-const data = {
+interface MyStore {
+  fruits: string[];
+  vegetales: string[];
+}
+
+const initialData: MyStore = {
   fruits: fruits,
   vegetales: vegetales,
 };
 
-export const MyContext = React.createContext(data);
+//create context
+export const MyContext = React.createContext<MyStore | null>(null);
 
-const MyProvider: React.FC<{ fruits: string[]; vegetales: string[] }> = (props) => {
-  return <MyContext.Provider value={data}>{props.children}</MyContext.Provider>;
+//create component provider of this context
+const MyProvider: React.FC<MyStore> = (props) => {
+  return <MyContext.Provider value={initialData}>{props.children}</MyContext.Provider>;
 };
 
 export default MyProvider;
