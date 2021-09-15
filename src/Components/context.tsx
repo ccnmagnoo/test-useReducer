@@ -14,6 +14,7 @@ export const MyContext = React.createContext(initialState);
 const MyProvider: React.FC = (props) => {
   //importing useReducer
   const [state, dispatch] = React.useReducer(fruitReducer, initialState);
+
   const init: MyState = {
     ...state,
     increase: () => dispatch(inscreaseFruit),

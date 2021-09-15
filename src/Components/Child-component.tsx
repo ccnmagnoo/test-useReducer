@@ -1,5 +1,5 @@
 import React from 'react';
-import { MyContext } from './contextProvider';
+import { MyContext } from './context';
 
 import useList from './useList';
 

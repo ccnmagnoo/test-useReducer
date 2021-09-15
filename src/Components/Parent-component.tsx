@@ -1,6 +1,6 @@
 import React from 'react';
 import { Child } from './Child-component';
-import { MyContext } from './contextProvider';
+import { MyContext } from './context';
 import useList from './useList';
 
 export const Parent = () => {
