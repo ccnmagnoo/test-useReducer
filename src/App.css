@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: black;
+  background-color: #2a3e51;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,6 +22,30 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.Parent-section {
+  background-color: cadetblue;
+  padding: 20px;
+  border-radius: 50px;
+  border: 1px solid;
+  box-shadow: 5px 5px 5px darkslategray;
+  align-content: center;
+}
+
+.Child-section {
+  background-color: darkcyan;
+  text-align: center;
+  color: floralwhite;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 30px;
+  border: 1px solid;
+  box-shadow: 2px 2px 2px gray;
+}
+
+.Data-section {
+  color: #2a3e51;
 }
 
 .App-link {
